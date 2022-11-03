@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
 
+import { Box } from '@mui/material';
 function App() {
   return (
-    <div className="App">
-      <h1>New App</h1>
-    </div>
+    <Box>
+      Hi there
+    </Box>
   );
 }
 
