@@ -1,12 +1,25 @@
 
-import { Typography } from "@mui/material"
+import { AppBar, Toolbar, Typography } from "@mui/material"
+import {styled} from "@mui/material/styles";
 
-import { Box } from "@mui/system"
+
+const StyledToolbar = styled(Toolbar)({
+    display: "flex",
+    justifyContent: "space-between",
+}) as typeof Toolbar;
 
 export const Navbar = () =>{
-    return (<Box>
-        <Typography >
-            Navbar
-        </Typography>
-    </Box>)
+    return (<AppBar>
+        <StyledToolbar>
+            <Typography>
+                Logo
+            </Typography>
+            <Typography>
+                Search bar
+            </Typography>
+            <Typography>
+                profile pic + tooltip
+            </Typography>
+        </StyledToolbar>
+    </AppBar>)
 }
