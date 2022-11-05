@@ -6,7 +6,7 @@ import {
   ImageListItemBar,
   Tooltip,
 } from "@mui/material";
-import { fakeData } from "./fakeData";
+import { fakeData } from "../fakeData";
 
 export const RecentImageList = () => {
   return (

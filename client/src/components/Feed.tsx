@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { Recipe } from "./Recipe";
-import { fakeData } from "./fakeData";
+import { fakeData } from "../fakeData";
 
 export const Feed = () => {
   return (

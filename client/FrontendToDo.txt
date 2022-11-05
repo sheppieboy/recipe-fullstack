@@ -2,9 +2,9 @@ TO DO:
 =======
 
 - Navbar with components
-- Right bar with components
+- Add recipe component needed
 - Sidebar with tool tip for dark mode
-- Sidebar stickyness
+- Sidebar and right bar stickyness
 - Add Favourites to Sidebar
 - breakpoints on home page
 - Add sort by menu i.e., most recents, most active, most liked
