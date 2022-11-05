@@ -1,4 +1,4 @@
-import { FakeRecipe } from "./types";
+import { FakeRecipe } from "./components/types";
 
 export const fakeData: FakeRecipe[] = [
   {
