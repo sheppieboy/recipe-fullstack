@@ -4,6 +4,7 @@ import {
   Favorite,
   FavoriteBorder,
 } from "@mui/icons-material";
+
 import {
   Avatar,
   Card,
@@ -56,9 +57,11 @@ export const Recipe = ({
     <Card sx={{ m: 2 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: randomColor() }}>
-            {getFirst2Letters(username)}
-          </Avatar>
+          <Tooltip title={username}>
+            <Avatar sx={{ bgcolor: randomColor() }}>
+              {getFirst2Letters(username)}
+            </Avatar>
+          </Tooltip>
         }
         action={
           <ThemeProvider theme={themeForToolTip}>
