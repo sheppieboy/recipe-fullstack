@@ -1,8 +1,9 @@
 TO DO:
 =======
 
-- Navbar with components
 - Add recipe component needed
+- Add coloring and cut username size for avatar in Navbar
+- pass in fake data for Navbar
 - breakpoints on home page
 - Add sort by menu i.e., most recents, most active, most liked for Feed on Homepage
 - Move AppLayout and Theme to separate files
