@@ -13,13 +13,12 @@ import {
   ListItemIcon,
   ListItemText,
   Switch,
-  Typography,
+  Tooltip,
 } from "@mui/material";
 
 export const Sidebar = () => {
   return (
-    <Box sx={{ flex: 1, p: 2, bgcolor: "yellow" }}>
-      <Typography>Sidebar</Typography>
+    <Box position="fixed">
       <List>
         {/*Homepage */}
         <ListItem disablePadding>
@@ -59,9 +58,11 @@ export const Sidebar = () => {
         </ListItem>
         {/* Dark Mode*/}
         <ListItem>
-          <ListItemIcon>
-            <ModeNight />
-          </ListItemIcon>
+          <Tooltip title="Darkmode">
+            <ListItemIcon>
+              <ModeNight />
+            </ListItemIcon>
+          </Tooltip>
           <Switch />
         </ListItem>
       </List>

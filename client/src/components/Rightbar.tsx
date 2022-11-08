@@ -4,7 +4,7 @@ import { RecentImageList } from "./RecentImageList";
 
 export const Rightbar = () => {
   return (
-    <Box sx={{ bgcolor: "red", flex: 2, p: 2 }}>
+    <Box sx={{ flex: 2, p: 2 }}>
       <Typography variant="h6" sx={{ fontWeight: 100, mt: 1, mb: 2 }}>
         Online Users
       </Typography>

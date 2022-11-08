@@ -54,7 +54,7 @@ export const Recipe = ({
   recipe: { username, image, date, description, title },
 }: Props) => {
   return (
-    <Card sx={{ m: 2 }}>
+    <Card sx={{ m: 2 }} elevation={6}>
       <CardHeader
         avatar={
           <Tooltip title={username}>
