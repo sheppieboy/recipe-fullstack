@@ -80,7 +80,7 @@ export const Recipe = ({
         <Typography>{description}</Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <IconButton aria-label="Like">
           <Checkbox
             icon={<FavoriteBorder />}
             checkedIcon={<Favorite sx={{ color: "red" }} />}

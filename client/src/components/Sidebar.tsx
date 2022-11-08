@@ -1,5 +1,6 @@
 import {
   AccountBox,
+  Collections,
   Group,
   Home,
   ModeNight,
@@ -45,6 +46,15 @@ export const Sidebar = () => {
               <Group />
             </ListItemIcon>
             <ListItemText primary="Users" />
+          </ListItemButton>
+        </ListItem>
+        {/* All Users page */}
+        <ListItem disablePadding>
+          <ListItemButton component="a" href="">
+            <ListItemIcon>
+              <Collections />
+            </ListItemIcon>
+            <ListItemText primary="Favorites" />
           </ListItemButton>
         </ListItem>
         {/* Settings */}
