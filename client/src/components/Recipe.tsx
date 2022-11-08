@@ -13,9 +13,7 @@ import {
   CardHeader,
   CardMedia,
   Checkbox,
-  createTheme,
   IconButton,
-  ThemeProvider,
   Tooltip,
   Typography,
 } from "@mui/material";
@@ -36,20 +34,6 @@ function getFirst2Letters(username: string) {
   return username.slice(0, 2);
 }
 
-const themeForToolTip = createTheme({
-  components: {
-    MuiTooltip: {
-      styleOverrides: {
-        tooltip: {
-          fontWeight: "light",
-          color: "white",
-          backgroundColor: "black",
-        },
-      },
-    },
-  },
-});
-
 export const Recipe = ({
   recipe: { username, image, date, description, title },
 }: Props) => {
@@ -64,13 +48,11 @@ export const Recipe = ({
           </Tooltip>
         }
         action={
-          <ThemeProvider theme={themeForToolTip}>
-            <Tooltip title="See full recipe">
-              <IconButton aria-label="go to recipe">
-                <ArrowCircleRight />
-              </IconButton>
-            </Tooltip>
-          </ThemeProvider>
+          <Tooltip title="See full recipe">
+            <IconButton aria-label="go to recipe">
+              <ArrowCircleRight />
+            </IconButton>
+          </Tooltip>
         }
         title={title}
         subheader={date}
@@ -86,13 +68,11 @@ export const Recipe = ({
             checkedIcon={<Favorite sx={{ color: "red" }} />}
           />
         </IconButton>
-        <ThemeProvider theme={themeForToolTip}>
-          <Tooltip title="Add to Favourites">
-            <IconButton aria-label="add to favourites">
-              <AddCircle sx={{ color: randomColor() }} />
-            </IconButton>
-          </Tooltip>
-        </ThemeProvider>
+        <Tooltip title="Add to Favourites">
+          <IconButton aria-label="add to favourites">
+            <AddCircle sx={{ color: randomColor() }} />
+          </IconButton>
+        </Tooltip>
       </CardActions>
     </Card>
   );

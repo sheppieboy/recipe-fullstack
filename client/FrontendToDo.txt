@@ -3,11 +3,8 @@ TO DO:
 
 - Navbar with components
 - Add recipe component needed
-- Sidebar with tool tip for dark mode
-- Add Favourites to Sidebar
 - breakpoints on home page
-- Add sort by menu i.e., most recents, most active, most liked
-- global theme with dark mode and incorporate the tooltip
+- Add sort by menu i.e., most recents, most active, most liked for Feed on homepage
 - Generate a Logo from daell-e?
 
 Pages:
