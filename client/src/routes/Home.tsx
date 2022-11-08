@@ -1,5 +1,4 @@
 import { Box, Stack } from "@mui/material";
-import { Sidebar } from "../components/Sidebar";
 import { Feed } from "../components/Feed";
 import { Rightbar } from "../components/Rightbar";
 
@@ -12,7 +11,6 @@ export const Home = () => {
         justifyContent="space-between"
         sx={{ pt: 9 }}
       >
-        <Sidebar />
         <Feed />
         <Rightbar />
       </Stack>

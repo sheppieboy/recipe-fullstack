@@ -5,11 +5,20 @@ import { Home } from "./routes/Home";
 import { Profile } from "./routes/Profile";
 import { Users } from "./routes/Users";
 import { Settings } from "./routes/Settings";
+import { Box, Stack } from "@mui/material";
+import { Sidebar } from "./components/Sidebar";
 
 const AppLayout = () => (
   <>
     <Navbar />
-    <Outlet />
+    <Stack direction="row" spacing={2} justifyContent="space-between">
+      <Box sx={{ flex: 1, pt: 9 }}>
+        <Sidebar />
+      </Box>
+      <Box sx={{ flex: 6 }}>
+        <Outlet />
+      </Box>
+    </Stack>
   </>
 );
 
