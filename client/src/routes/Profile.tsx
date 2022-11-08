@@ -1,5 +1,4 @@
-import { Stack, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Stack, Typography, Box } from "@mui/material";
 
 export const Profile = () => {
   return (

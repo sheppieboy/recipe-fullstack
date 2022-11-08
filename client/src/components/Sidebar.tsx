@@ -16,6 +16,7 @@ import {
   Switch,
   Tooltip,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const Sidebar = () => {
   return (
@@ -23,7 +24,7 @@ export const Sidebar = () => {
       <List>
         {/*Homepage */}
         <ListItem disablePadding>
-          <ListItemButton component="a" href="">
+          <ListItemButton component={Link} to={"/"}>
             <ListItemIcon>
               <Home />
             </ListItemIcon>
@@ -32,7 +33,7 @@ export const Sidebar = () => {
         </ListItem>
         {/* Profile */}
         <ListItem disablePadding>
-          <ListItemButton component="a" href="">
+          <ListItemButton component={Link} to={"profile"}>
             <ListItemIcon>
               <AccountBox />
             </ListItemIcon>
@@ -41,16 +42,16 @@ export const Sidebar = () => {
         </ListItem>
         {/* All Users page */}
         <ListItem disablePadding>
-          <ListItemButton component="a" href="">
+          <ListItemButton component={Link} to={"users"}>
             <ListItemIcon>
               <Group />
             </ListItemIcon>
             <ListItemText primary="Users" />
           </ListItemButton>
         </ListItem>
-        {/* All Users page */}
+        {/* All Favorites page */}
         <ListItem disablePadding>
-          <ListItemButton component="a" href="">
+          <ListItemButton component={Link} to={"favorites"}>
             <ListItemIcon>
               <Collections />
             </ListItemIcon>
@@ -59,7 +60,7 @@ export const Sidebar = () => {
         </ListItem>
         {/* Settings */}
         <ListItem disablePadding>
-          <ListItemButton component="a" href="">
+          <ListItemButton component={Link} to={"settings"}>
             <ListItemIcon>
               <Settings />
             </ListItemIcon>

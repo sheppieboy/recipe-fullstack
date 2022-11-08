@@ -4,8 +4,8 @@ TO DO:
 - Navbar with components
 - Add recipe component needed
 - breakpoints on home page
-- Add sort by menu i.e., most recents, most active, most liked for Feed on homepage
-- Generate a Logo from daell-e?
+- Add sort by menu i.e., most recents, most active, most liked for Feed on Homepage
+- Move AppLayout and Theme to separate files
 
 Pages:
 - Profile

@@ -1,9 +1,8 @@
-import { Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Typography, Box } from "@mui/material";
 
 export const Users = () => {
   return (
-    <Box>
+    <Box sx={{ pt: 9 }}>
       <Typography>Users</Typography>
     </Box>
   );
