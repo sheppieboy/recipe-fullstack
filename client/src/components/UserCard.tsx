@@ -14,8 +14,8 @@ export const UserCard = () => {
   const bgColor = "#D6FFFF";
 
   return (
-    <Box sx={{ width: 300, p: 1 }}>
-      <Card sx={{ bgcolor: bgColor }}>
+    <Box sx={{ width: 300, p: 1.5 }}>
+      <Card sx={{ bgcolor: bgColor }} elevation={4}>
         <CardActionArea>
           <CardHeader
             avatar={<Avatar>username</Avatar>}
