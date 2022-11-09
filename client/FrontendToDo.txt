@@ -2,15 +2,16 @@ TO DO:
 =======
 
 - Add recipe component needed
+- move util functions to its own file 
 - Add coloring and cut username size for avatar in Navbar
 - pass in fake data for Navbar
 - breakpoints on home page
 - Add sort by menu i.e., most recents, most active, most liked for Feed on Homepage
 - Move AppLayout and Theme to separate files
+- Add in avatar coloring for the UserCard 
+- Fix Recipe.tsx component to tell when a Recipe has been added to favourites i.e. grey to red 
 
 Pages:
 - Profile
-- Users
 - Settings page
 - Favourites page
-
