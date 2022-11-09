@@ -56,6 +56,7 @@ export const UserCard = () => {
                 display: "flex",
                 alignItems: "center",
                 gap: 1,
+                color: color,
               }}
             >
               <Typography>5</Typography>
