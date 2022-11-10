@@ -16,6 +16,7 @@ type Recipe {
   description: String!
   id: Int!
   imageURL: String!
+  instructions: String!
   likeCount: Int!
   title: String!
 }

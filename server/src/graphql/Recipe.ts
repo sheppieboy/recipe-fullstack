@@ -8,6 +8,7 @@ export const Recipe = objectType({
     t.nonNull.int("id");
     t.nonNull.string("title");
     t.nonNull.string("description");
+    t.nonNull.string("instructions");
     t.nonNull.string("imageURL");
     t.nonNull.int("likeCount");
     t.nonNull.field("createdAt", { type: "DateTime" });

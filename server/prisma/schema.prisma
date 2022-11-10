@@ -9,3 +9,15 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+model Recipe{
+  id Int @id @default(autoincrement())
+  title String
+  createAt DateTime @default(now())
+  imageUrl String
+  description String
+  instructions String
+  likeCount Int @default(0)
+
+}

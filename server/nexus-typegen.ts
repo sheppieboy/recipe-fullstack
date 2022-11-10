@@ -50,6 +50,7 @@ export interface NexusGenObjects {
     description: string; // String!
     id: number; // Int!
     imageURL: string; // String!
+    instructions: string; // String!
     likeCount: number; // Int!
     title: string; // String!
   }
@@ -74,6 +75,7 @@ export interface NexusGenFieldTypes {
     description: string; // String!
     id: number; // Int!
     imageURL: string; // String!
+    instructions: string; // String!
     likeCount: number; // Int!
     title: string; // String!
   }
@@ -88,6 +90,7 @@ export interface NexusGenFieldTypeNames {
     description: 'String'
     id: 'Int'
     imageURL: 'String'
+    instructions: 'String'
     likeCount: 'Int'
     title: 'String'
   }
