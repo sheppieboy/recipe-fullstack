@@ -29,6 +29,6 @@ model Recipe {
   instructions String
   likeCount Int @default(0)
   author User? @relation(fields: [authorId], references: [id])
-  authorId Int?
+  authorId Int? 
 }
 
