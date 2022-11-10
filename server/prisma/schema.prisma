@@ -10,8 +10,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id Int @id @default(autoincrement())
+  username String @unique
+  createAt DateTime @default(now())
+  recipes Recipe[]
+  recipesCount Int @default(0)
+  likesCount Int @default(0)
+  commentsCount Int @default(0)
+}
 
-model Recipe{
+model Recipe {
   id Int @id @default(autoincrement())
   title String
   createAt DateTime @default(now())
@@ -19,5 +28,7 @@ model Recipe{
   description String
   instructions String
   likeCount Int @default(0)
-
+  author User? @relation(fields: [authorId], references: [id])
+  authorId Int?
 }
+
