@@ -8,7 +8,7 @@ A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `dat
 scalar DateTime
 
 type Query {
-  ok: Boolean!
+  allUsers: [User]!
 }
 
 type Recipe {
@@ -22,6 +22,13 @@ type Recipe {
   title: String!
 }
 
+input RecipeCreateInput {
+  description: String!
+  imageURL: String!
+  instructions: String!
+  title: String!
+}
+
 type User {
   commentsCount: Int!
   createdAt: DateTime!
@@ -29,5 +36,10 @@ type User {
   likesCount: Int!
   recipes: [Recipe]
   recipesCount: Int!
+  username: String!
+}
+
+input UserCreateInput {
+  recipes: [RecipeCreateInput!]
   username: String!
 }

@@ -29,6 +29,16 @@ declare global {
 }
 
 export interface NexusGenInputs {
+  RecipeCreateInput: { // input type
+    description: string; // String!
+    imageURL: string; // String!
+    instructions: string; // String!
+    title: string; // String!
+  }
+  UserCreateInput: { // input type
+    recipes?: NexusGenInputs['RecipeCreateInput'][] | null; // [RecipeCreateInput!]
+    username: string; // String!
+  }
 }
 
 export interface NexusGenEnums {
@@ -76,7 +86,7 @@ export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars
 
 export interface NexusGenFieldTypes {
   Query: { // field return type
-    ok: boolean; // Boolean!
+    allUsers: Array<NexusGenRootTypes['User'] | null>; // [User]!
   }
   Recipe: { // field return type
     author: NexusGenRootTypes['User'] | null; // User
@@ -101,7 +111,7 @@ export interface NexusGenFieldTypes {
 
 export interface NexusGenFieldTypeNames {
   Query: { // field return type name
-    ok: 'Boolean'
+    allUsers: 'User'
   }
   Recipe: { // field return type name
     author: 'User'
@@ -135,7 +145,7 @@ export interface NexusGenTypeInterfaces {
 
 export type NexusGenObjectNames = keyof NexusGenObjects;
 
-export type NexusGenInputNames = never;
+export type NexusGenInputNames = keyof NexusGenInputs;
 
 export type NexusGenEnumNames = never;
 
