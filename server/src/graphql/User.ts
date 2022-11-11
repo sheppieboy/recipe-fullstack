@@ -21,3 +21,15 @@ export const User = objectType({
     });
   },
 });
+
+export const UserQuery = objectType({
+  name: "Query",
+  definition(t) {
+    t.nonNull.list.field("allUsers", {
+      type: "User",
+      resolve: (_, __, context) => {
+        return context.prisma.user.findMany();
+      },
+    });
+  },
+});
