@@ -20,3 +20,12 @@ type Recipe {
   likeCount: Int!
   title: String!
 }
+
+type User {
+  commentsCount: Int!
+  createdAt: DateTime!
+  id: Int!
+  likesCount: Int!
+  recipesCount: Int!
+  username: String!
+}

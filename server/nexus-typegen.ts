@@ -54,6 +54,14 @@ export interface NexusGenObjects {
     likeCount: number; // Int!
     title: string; // String!
   }
+  User: { // root type
+    commentsCount: number; // Int!
+    createdAt: NexusGenScalars['DateTime']; // DateTime!
+    id: number; // Int!
+    likesCount: number; // Int!
+    recipesCount: number; // Int!
+    username: string; // String!
+  }
 }
 
 export interface NexusGenInterfaces {
@@ -79,6 +87,14 @@ export interface NexusGenFieldTypes {
     likeCount: number; // Int!
     title: string; // String!
   }
+  User: { // field return type
+    commentsCount: number; // Int!
+    createdAt: NexusGenScalars['DateTime']; // DateTime!
+    id: number; // Int!
+    likesCount: number; // Int!
+    recipesCount: number; // Int!
+    username: string; // String!
+  }
 }
 
 export interface NexusGenFieldTypeNames {
@@ -93,6 +109,14 @@ export interface NexusGenFieldTypeNames {
     instructions: 'String'
     likeCount: 'Int'
     title: 'String'
+  }
+  User: { // field return type name
+    commentsCount: 'Int'
+    createdAt: 'DateTime'
+    id: 'Int'
+    likesCount: 'Int'
+    recipesCount: 'Int'
+    username: 'String'
   }
 }
 
