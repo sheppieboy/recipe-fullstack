@@ -9,7 +9,7 @@ export const User = objectType({
     t.nonNull.int("recipesCount");
     t.nonNull.int("likesCount");
     t.nonNull.int("commentsCount");
-    t.nonNull.list.nonNull.field("recipes", {
+    t.list.field("recipes", {
       type: "Recipe",
       resolve: ({ id }, _, { prisma }) => {
         return prisma.user

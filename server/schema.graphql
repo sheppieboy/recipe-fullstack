@@ -12,6 +12,7 @@ type Query {
 }
 
 type Recipe {
+  author: User
   createdAt: DateTime!
   description: String!
   id: Int!
@@ -26,6 +27,7 @@ type User {
   createdAt: DateTime!
   id: Int!
   likesCount: Int!
+  recipes: [Recipe]
   recipesCount: Int!
   username: String!
 }

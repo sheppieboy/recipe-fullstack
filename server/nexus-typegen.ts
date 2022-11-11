@@ -79,6 +79,7 @@ export interface NexusGenFieldTypes {
     ok: boolean; // Boolean!
   }
   Recipe: { // field return type
+    author: NexusGenRootTypes['User'] | null; // User
     createdAt: NexusGenScalars['DateTime']; // DateTime!
     description: string; // String!
     id: number; // Int!
@@ -92,6 +93,7 @@ export interface NexusGenFieldTypes {
     createdAt: NexusGenScalars['DateTime']; // DateTime!
     id: number; // Int!
     likesCount: number; // Int!
+    recipes: Array<NexusGenRootTypes['Recipe'] | null> | null; // [Recipe]
     recipesCount: number; // Int!
     username: string; // String!
   }
@@ -102,6 +104,7 @@ export interface NexusGenFieldTypeNames {
     ok: 'Boolean'
   }
   Recipe: { // field return type name
+    author: 'User'
     createdAt: 'DateTime'
     description: 'String'
     id: 'Int'
@@ -115,6 +118,7 @@ export interface NexusGenFieldTypeNames {
     createdAt: 'DateTime'
     id: 'Int'
     likesCount: 'Int'
+    recipes: 'Recipe'
     recipesCount: 'Int'
     username: 'String'
   }

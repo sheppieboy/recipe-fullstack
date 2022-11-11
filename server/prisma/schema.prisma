@@ -13,7 +13,7 @@ datasource db {
 model User {
   id Int @id @default(autoincrement())
   username String @unique
-  createAt DateTime @default(now())
+  createdAt DateTime @default(now())
   recipes Recipe[]
   recipesCount Int @default(0)
   likesCount Int @default(0)
@@ -23,8 +23,8 @@ model User {
 model Recipe {
   id Int @id @default(autoincrement())
   title String
-  createAt DateTime @default(now())
-  imageUrl String
+  createdAt DateTime @default(now())
+  imageURL String
   description String
   instructions String
   likeCount Int @default(0)
