@@ -12,5 +12,15 @@ export const Recipe = objectType({
     t.nonNull.string("imageURL");
     t.nonNull.int("likeCount");
     t.nonNull.field("createdAt", { type: "DateTime" });
+    t.field("author", {
+      type: "User",
+      resolve: ({ id }, _, { prisma }) => {
+        return prisma.recipe
+          .findUnique({
+            where: { id: id },
+          })
+          .author();
+      },
+    });
   },
 });
