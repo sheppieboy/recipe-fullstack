@@ -34,26 +34,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   await prisma.recipe.deleteMany();
-  const newRecipe = await prisma.recipe.create({
-    data: {
-      title: "Glazed Doughnuts",
-      imageUrl: "sandkankda",
-      description: "andkna",
-      instructions: "ansjanbsjk",
-    },
-  });
-
-  const allRecipes = await prisma.recipe.findMany();
-
   await prisma.user.deleteMany();
-  const newUser = await prisma.user.create({
-    data: {
-      username: "Sheppie",
-    },
-  });
-
-  const allUsers = await prisma.user.findMany();
-  console.log(allUsers, allRecipes);
 }
 
 main()

@@ -29,16 +29,6 @@ declare global {
 }
 
 export interface NexusGenInputs {
-  RecipeCreateInput: { // input type
-    description: string; // String!
-    imageURL: string; // String!
-    instructions: string; // String!
-    title: string; // String!
-  }
-  UserCreateInput: { // input type
-    recipes?: NexusGenInputs['RecipeCreateInput'][] | null; // [RecipeCreateInput!]
-    username: string; // String!
-  }
 }
 
 export interface NexusGenEnums {
@@ -157,7 +147,7 @@ export interface NexusGenTypeInterfaces {
 
 export type NexusGenObjectNames = keyof NexusGenObjects;
 
-export type NexusGenInputNames = keyof NexusGenInputs;
+export type NexusGenInputNames = never;
 
 export type NexusGenEnumNames = never;
 

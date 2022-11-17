@@ -27,13 +27,6 @@ type Recipe {
   title: String!
 }
 
-input RecipeCreateInput {
-  description: String!
-  imageURL: String!
-  instructions: String!
-  title: String!
-}
-
 type User {
   commentsCount: Int!
   createdAt: DateTime!
@@ -41,10 +34,5 @@ type User {
   likesCount: Int!
   recipes: [Recipe]
   recipesCount: Int!
-  username: String!
-}
-
-input UserCreateInput {
-  recipes: [RecipeCreateInput!]
   username: String!
 }
