@@ -30,8 +30,10 @@ type Recipe {
 type User {
   commentsCount: Int!
   createdAt: DateTime!
+  email: String!
   id: Int!
   likesCount: Int!
+  password: String!
   recipes: [Recipe]
   recipesCount: Int!
   username: String!

@@ -5,6 +5,7 @@ export const User = objectType({
   definition(t) {
     t.nonNull.int("id");
     t.nonNull.string("username");
+    t.nonNull.string("email");
     t.nonNull.field("createdAt", { type: "DateTime" });
     t.nonNull.int("recipesCount");
     t.nonNull.int("likesCount");
