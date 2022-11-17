@@ -64,7 +64,6 @@ export interface NexusGenObjects {
     email: string; // String!
     id: number; // Int!
     likesCount: number; // Int!
-    password: string; // String!
     recipesCount: number; // Int!
     username: string; // String!
   }
@@ -104,7 +103,6 @@ export interface NexusGenFieldTypes {
     email: string; // String!
     id: number; // Int!
     likesCount: number; // Int!
-    password: string; // String!
     recipes: Array<NexusGenRootTypes['Recipe'] | null> | null; // [Recipe]
     recipesCount: number; // Int!
     username: string; // String!
@@ -135,7 +133,6 @@ export interface NexusGenFieldTypeNames {
     email: 'String'
     id: 'Int'
     likesCount: 'Int'
-    password: 'String'
     recipes: 'Recipe'
     recipesCount: 'Int'
     username: 'String'
