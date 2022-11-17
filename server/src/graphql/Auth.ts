@@ -43,5 +43,43 @@ export const AuthMutation = extendType({
         };
       },
     });
+
+    t.nonNull.field("login", {
+      type: "AuthPayload",
+      args: {
+        username: nonNull(stringArg()),
+        password: nonNull(stringArg()),
+      },
+
+      async resolve(parent, { username, password }, { prisma }) {
+        const user = await prisma.user.findUnique({
+          //get user from db
+          where: {
+            username: username,
+          },
+        });
+
+        if (!user) {
+          throw new Error("No such user exists");
+        }
+
+        const valid = await bcrypt.compare(password, user.password); //check password matches
+
+        if (!valid) {
+          throw new Error("Invalid Password");
+        }
+
+        const token = jwt.sign(
+          //create token
+          { userId: user.id },
+          process.env.APP_SECRET as string
+        );
+
+        return {
+          user,
+          token,
+        };
+      },
+    });
   },
 });
