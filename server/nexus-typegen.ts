@@ -48,6 +48,7 @@ export interface NexusGenObjects {
     token: string; // String!
     user: NexusGenRootTypes['User']; // User!
   }
+  Mutation: {};
   Query: {};
   Recipe: { // root type
     createdAt: NexusGenScalars['DateTime']; // DateTime!
@@ -84,6 +85,9 @@ export interface NexusGenFieldTypes {
     token: string; // String!
     user: NexusGenRootTypes['User']; // User!
   }
+  Mutation: { // field return type
+    signup: NexusGenRootTypes['AuthPayload']; // AuthPayload!
+  }
   Query: { // field return type
     allUsers: Array<NexusGenRootTypes['User'] | null>; // [User]!
   }
@@ -114,6 +118,9 @@ export interface NexusGenFieldTypeNames {
     token: 'String'
     user: 'User'
   }
+  Mutation: { // field return type name
+    signup: 'AuthPayload'
+  }
   Query: { // field return type name
     allUsers: 'User'
   }
@@ -140,6 +147,13 @@ export interface NexusGenFieldTypeNames {
 }
 
 export interface NexusGenArgTypes {
+  Mutation: {
+    signup: { // args
+      email: string; // String!
+      password: string; // String!
+      username: string; // String!
+    }
+  }
 }
 
 export interface NexusGenAbstractTypeMembers {
