@@ -21,6 +21,7 @@ type Mutation {
 type Query {
   allUsers: [User]!
   findRecipe(id: Int!): Recipe
+  findUser(id: Int!): User
 }
 
 type Recipe {
