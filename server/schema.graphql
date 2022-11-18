@@ -20,6 +20,7 @@ type Mutation {
 
 type Query {
   allUsers: [User]!
+  feed: [Recipe!]!
   findRecipe(id: Int!): Recipe
   findUser(id: Int!): User
 }
