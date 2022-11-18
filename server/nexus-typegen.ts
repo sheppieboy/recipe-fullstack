@@ -92,6 +92,7 @@ export interface NexusGenFieldTypes {
   }
   Query: { // field return type
     allUsers: Array<NexusGenRootTypes['User'] | null>; // [User]!
+    findRecipe: NexusGenRootTypes['Recipe'] | null; // Recipe
   }
   Recipe: { // field return type
     author: NexusGenRootTypes['User'] | null; // User
@@ -127,6 +128,7 @@ export interface NexusGenFieldTypeNames {
   }
   Query: { // field return type name
     allUsers: 'User'
+    findRecipe: 'Recipe'
   }
   Recipe: { // field return type name
     author: 'User'
@@ -166,6 +168,11 @@ export interface NexusGenArgTypes {
       email: string; // String!
       password: string; // String!
       username: string; // String!
+    }
+  }
+  Query: {
+    findRecipe: { // args
+      id: number; // Int!
     }
   }
 }
