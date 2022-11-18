@@ -11,6 +11,11 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true
   }
 }
