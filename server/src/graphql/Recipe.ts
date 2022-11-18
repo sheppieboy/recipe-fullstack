@@ -46,7 +46,7 @@ export const RecipeMutation = extendType({
       },
 
       async resolve(
-        parent,
+        _,
         { title, imageURL, description, instructions },
         context
       ) {
@@ -79,7 +79,7 @@ export const RecipeQuery = extendType({
       args: {
         id: nonNull(intArg()),
       },
-      resolve(parent, { id }, { prisma }) {
+      resolve(_, { id }, { prisma }) {
         return prisma.recipe.findUnique({
           where: { id: id },
         });
