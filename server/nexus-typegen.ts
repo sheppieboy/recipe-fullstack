@@ -86,6 +86,7 @@ export interface NexusGenFieldTypes {
     user: NexusGenRootTypes['User']; // User!
   }
   Mutation: { // field return type
+    addRecipe: NexusGenRootTypes['Recipe']; // Recipe!
     login: NexusGenRootTypes['AuthPayload']; // AuthPayload!
     signup: NexusGenRootTypes['AuthPayload']; // AuthPayload!
   }
@@ -120,6 +121,7 @@ export interface NexusGenFieldTypeNames {
     user: 'User'
   }
   Mutation: { // field return type name
+    addRecipe: 'Recipe'
     login: 'AuthPayload'
     signup: 'AuthPayload'
   }
@@ -150,6 +152,12 @@ export interface NexusGenFieldTypeNames {
 
 export interface NexusGenArgTypes {
   Mutation: {
+    addRecipe: { // args
+      description: string; // String!
+      imageURL: string; // String!
+      instructions: string; // String!
+      title: string; // String!
+    }
     login: { // args
       password: string; // String!
       username: string; // String!
