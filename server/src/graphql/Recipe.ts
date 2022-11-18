@@ -71,6 +71,7 @@ export const RecipeMutation = extendType({
     });
   },
 });
+
 export const RecipeQuery = extendType({
   type: "Query",
   definition(t) {
@@ -83,6 +84,13 @@ export const RecipeQuery = extendType({
         return prisma.recipe.findUnique({
           where: { id: id },
         });
+      },
+    });
+
+    t.nonNull.list.nonNull.field("feed", {
+      type: "Recipe",
+      resolve(_, __, { prisma }) {
+        return prisma.recipe.findMany();
       },
     });
   },
