@@ -1,4 +1,11 @@
-import { asNexusMethod, objectType } from "nexus";
+import {
+  asNexusMethod,
+  extendType,
+  nonNull,
+  objectType,
+  stringArg,
+} from "nexus";
+
 import { DateTimeResolver } from "graphql-scalars";
 export const DateTime = asNexusMethod(DateTimeResolver, "date");
 
@@ -20,6 +27,45 @@ export const Recipe = objectType({
             where: { id: id },
           })
           .author();
+      },
+    });
+  },
+});
+
+export const RecipeMutation = extendType({
+  type: "Mutation",
+  definition(t) {
+    t.nonNull.field("addRecipe", {
+      type: "Recipe",
+      args: {
+        title: nonNull(stringArg()),
+        imageURL: nonNull(stringArg()),
+        description: nonNull(stringArg()),
+        instructions: nonNull(stringArg()),
+      },
+
+      async resolve(
+        parent,
+        { title, imageURL, description, instructions },
+        context
+      ) {
+        const { userId } = context;
+
+        if (!userId) {
+          throw new Error("Cannot add a recipe without logging in");
+        }
+
+        const newRecipe = await context.prisma.recipe.create({
+          data: {
+            title,
+            imageURL,
+            description,
+            instructions,
+            author: { connect: { id: userId } },
+          },
+        });
+
+        return newRecipe;
       },
     });
   },
