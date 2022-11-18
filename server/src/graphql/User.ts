@@ -1,4 +1,4 @@
-import { objectType } from "nexus";
+import { intArg, nonNull, objectType } from "nexus";
 
 export const User = objectType({
   name: "User",
@@ -30,6 +30,18 @@ export const UserQuery = objectType({
       type: "User",
       resolve: (_, __, context) => {
         return context.prisma.user.findMany();
+      },
+    });
+
+    t.nullable.field("findUser", {
+      type: "User",
+      args: {
+        id: nonNull(intArg()),
+      },
+      resolve(_, { id }, { prisma }) {
+        return prisma.user.findUnique({
+          where: { id: id },
+        });
       },
     });
   },
