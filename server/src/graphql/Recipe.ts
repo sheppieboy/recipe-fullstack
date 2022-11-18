@@ -1,6 +1,7 @@
 import {
   asNexusMethod,
   extendType,
+  intArg,
   nonNull,
   objectType,
   stringArg,
@@ -66,6 +67,22 @@ export const RecipeMutation = extendType({
         });
 
         return newRecipe;
+      },
+    });
+  },
+});
+export const RecipeQuery = extendType({
+  type: "Query",
+  definition(t) {
+    t.nullable.field("findRecipe", {
+      type: "Recipe",
+      args: {
+        id: nonNull(intArg()),
+      },
+      resolve(parent, { id }, { prisma }) {
+        return prisma.recipe.findUnique({
+          where: { id: id },
+        });
       },
     });
   },
